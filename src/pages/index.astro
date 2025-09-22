@@ -28,6 +28,12 @@ const pageDescription = "ACDEMIC coordina planeaci&oacute;n, clases y comunicaci
 
   <main>
     <section class="hero" id="inicio">
+      <!-- Partículas de conocimiento flotantes -->
+      <div class="knowledge-particle" style="top: 20%; left: 10%;"></div>
+      <div class="knowledge-particle" style="top: 60%; left: 85%;"></div>
+      <div class="knowledge-particle" style="top: 30%; left: 75%;"></div>
+      <div class="knowledge-particle" style="top: 80%; left: 15%;"></div>
+
       <div class="container hero-grid">
         <div class="hero-copy">
           <h1>Conectar, Potenciar, Transformar.</h1>
@@ -40,22 +46,46 @@ const pageDescription = "ACDEMIC coordina planeaci&oacute;n, clases y comunicaci
           </div>
         </div>
         <aside class="hero-visual" aria-hidden="true">
-          <div class="hero-card schedule">
-            <span class="card-suptitle">Aula Interactiva</span>
-            <strong>Participaci&oacute;n en tiempo real</strong>
-            <ul>
-              <li><span>Actividades y quizzes en vivo</span></li>
-              <li><span>Resultados al instante</span></li>
-              <li><span>Gamificaci&oacute;n que motiva</span></li>
-            </ul>
-          </div>
-          <div class="hero-card updates">
-            <span class="card-suptitle">Asistente Pedag&oacute;gico</span>
-            <strong>Ense&ntilde;anza inteligente</strong>
-            <div class="hero-pill-group">
-              <span class="pill">Genera contenido relevante</span>
-              <span class="pill">Adapta las lecciones</span>
-              <span class="pill">Ahorra tiempo valioso</span>
+          <div class="hero-dashboard">
+            <div class="dashboard-header">
+              <span class="dashboard-title">Panel de Control ACDEMIC</span>
+              <div class="dashboard-status">
+                <span class="status-indicator active"></span>
+                <span class="status-text">En vivo</span>
+              </div>
+            </div>
+            <div class="dashboard-content">
+              <div class="dashboard-section">
+                <h4>Clase Actual</h4>
+                <div class="class-info">
+                  <span class="subject">Matemáticas 10mo</span>
+                  <span class="participation">24/26 estudiantes activos</span>
+                </div>
+              </div>
+              <div class="dashboard-section">
+                <h4>Actividad en Progreso</h4>
+                <div class="activity-progress">
+                  <span class="activity-name">Quiz: Ecuaciones Cuadráticas</span>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 75%"></div>
+                  </div>
+                  <span class="progress-text">75% completado</span>
+                </div>
+              </div>
+              <div class="dashboard-metrics">
+                <div class="metric">
+                  <span class="metric-value">94%</span>
+                  <span class="metric-label">Participación</span>
+                </div>
+                <div class="metric">
+                  <span class="metric-value">8.7</span>
+                  <span class="metric-label">Promedio</span>
+                </div>
+                <div class="metric">
+                  <span class="metric-value">12</span>
+                  <span class="metric-label">Preguntas</span>
+                </div>
+              </div>
             </div>
           </div>
         </aside>
@@ -65,7 +95,12 @@ const pageDescription = "ACDEMIC coordina planeaci&oacute;n, clases y comunicaci
     <section class="section section-highlight" id="oferta">
       <div class="container">
         <header class="section-head">
-          <span class="section-tag">Oferta</span>
+          <span class="section-tag">
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+            </svg>
+            Oferta
+          </span>
           <h2>Todo el ciclo acad&eacute;mico gestionado en un solo lugar</h2>
           <p>
             Planifica, imparte y comunica desde ACDEMIC. La plataforma automatiza tareas repetitivas, guarda evidencias y ofrece
@@ -107,45 +142,110 @@ const pageDescription = "ACDEMIC coordina planeaci&oacute;n, clases y comunicaci
     <section class="section section-experience" id="experiencia">
       <div class="container">
         <header class="section-head">
-          <span class="section-tag">Experiencia</span>
-          <h2>Interfaces dise&ntilde;adas para cada integrante de la comunidad educativa</h2>
+          <span class="section-tag">
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            Experiencia
+          </span>
+          <h2>Una experiencia personalizada para cada participante del proceso educativo</h2>
         </header>
-        <div class="persona-showcase">
-          <article class="persona-pane">
-            <span class="persona-label">Docentes</span>
-            <h3>Su Asistente Pedag&oacute;gico</h3>
-            <p>
-              ACDEMIC automatiza las tareas repetitivas para que puedas centrarte en la ense&ntilde;anza. Accede a herramientas de gesti&oacute;n, un asistente contextual y un aula interactiva, todo en un mismo lugar.
-            </p>
-            <ul>
-              <li>Genera <strong>planeamientos</strong> seg&uacute;n los est&aacute;ndares educativos.</li>
-              <li>Crea <strong>actividades evaluativas</strong> contextuales.</li>
-              <li>Centraliza la comunicaci&oacute;n con las familias.</li>
-            </ul>
+        <div class="experience-grid">
+          <article class="experience-card">
+            <div class="experience-header">
+              <div class="experience-icon docentes">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
+                </svg>
+              </div>
+              <div class="experience-role">
+                <span class="role-label">Para</span>
+                <h3>Docentes</h3>
+              </div>
+            </div>
+            <div class="experience-content">
+              <h4>Su Asistente Pedag&oacute;gico</h4>
+              <p>Automatiza tareas repetitivas y accede a herramientas de gesti&oacute;n, asistente contextual y aula interactiva.</p>
+              <div class="experience-features">
+                <div class="feature-item">
+                  <span class="feature-title">Planeamientos</span>
+                  <span class="feature-desc">Seg&uacute;n est&aacute;ndares educativos</span>
+                </div>
+                <div class="feature-item">
+                  <span class="feature-title">Evaluaciones</span>
+                  <span class="feature-desc">Actividades contextuales</span>
+                </div>
+                <div class="feature-item">
+                  <span class="feature-title">Comunicaci&oacute;n</span>
+                  <span class="feature-desc">Centralizada con familias</span>
+                </div>
+              </div>
+            </div>
           </article>
-          <article class="persona-pane">
-            <span class="persona-label">Estudiantes</span>
-            <h3>Participaci&oacute;n y Claridad</h3>
-            <p>
-              Convi&eacute;rtete en un participante activo de tu educaci&oacute;n con acceso transparente a tu progreso y materiales de clase.
-            </p>
-            <ul>
-              <li>Calificaciones y materiales al instante</li>
-              <li>Participaci&oacute;n en actividades interactivas</li>
-              <li>Calendario personal con todas tus obligaciones</li>
-            </ul>
+
+          <article class="experience-card">
+            <div class="experience-header">
+              <div class="experience-icon estudiantes">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                </svg>
+              </div>
+              <div class="experience-role">
+                <span class="role-label">Para</span>
+                <h3>Estudiantes</h3>
+              </div>
+            </div>
+            <div class="experience-content">
+              <h4>Participaci&oacute;n y Claridad</h4>
+              <p>Convi&eacute;rtete en participante activo con acceso transparente a tu progreso y materiales.</p>
+              <div class="experience-features">
+                <div class="feature-item">
+                  <span class="feature-title">Resultados</span>
+                  <span class="feature-desc">Calificaciones al instante</span>
+                </div>
+                <div class="feature-item">
+                  <span class="feature-title">Interacci&oacute;n</span>
+                  <span class="feature-desc">Actividades en tiempo real</span>
+                </div>
+                <div class="feature-item">
+                  <span class="feature-title">Organizaci&oacute;n</span>
+                  <span class="feature-desc">Calendario personalizado</span>
+                </div>
+              </div>
+            </div>
           </article>
-          <article class="persona-pane">
-            <span class="persona-label">Familias</span>
-            <h3>Conexi&oacute;n y Tranquilidad</h3>
-            <p>
-              Mantente informado y conectado de forma sencilla, con una vista completa del progreso acad&eacute;mico de tus hijos.
-            </p>
-            <ul>
-              <li>Panel familiar con el progreso de todos tus hijos</li>
-              <li>Alertas relevantes sobre notas y eventos</li>
-              <li>Canal de comunicaci&oacute;n directo con los profesores</li>
-            </ul>
+
+          <article class="experience-card">
+            <div class="experience-header">
+              <div class="experience-icon familias">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                </svg>
+              </div>
+              <div class="experience-role">
+                <span class="role-label">Para</span>
+                <h3>Familias</h3>
+              </div>
+            </div>
+            <div class="experience-content">
+              <h4>Conexi&oacute;n y Tranquilidad</h4>
+              <p>Mantente informado y conectado con vista completa del progreso acad&eacute;mico.</p>
+              <div class="experience-features">
+                <div class="feature-item">
+                  <span class="feature-title">Panel Familiar</span>
+                  <span class="feature-desc">Progreso de todos los hijos</span>
+                </div>
+                <div class="feature-item">
+                  <span class="feature-title">Notificaciones</span>
+                  <span class="feature-desc">Alertas relevantes</span>
+                </div>
+                <div class="feature-item">
+                  <span class="feature-title">Comunicaci&oacute;n</span>
+                  <span class="feature-desc">Contacto directo</span>
+                </div>
+              </div>
+            </div>
           </article>
         </div>
       </div>
@@ -153,31 +253,85 @@ const pageDescription = "ACDEMIC coordina planeaci&oacute;n, clases y comunicaci
 
     <section class="section section-journey" id="recorrido">
       <div class="container">
-        <header class="section-head center">
-          <span class="section-tag">Recorrido</span>
-          <h2>Un d&iacute;a acad&eacute;mico coordinado de principio a fin</h2>
+        <header class="section-head">
+          <span class="section-tag">
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+            Recorrido
+          </span>
         </header>
-        <div class="journey-flow">
-          <article class="journey-step">
-            <span class="step-number">01</span>
-            <h3>Define tu plan</h3>
-            <p>Configura unidades, objetivos y evidencias. ACDEMIC replica la estructura para cada grupo en segundos.</p>
-          </article>
-          <article class="journey-step">
-            <span class="step-number">02</span>
-            <h3>Comparte la clase</h3>
-            <p>Lanza actividades, controla asistencia y entrega materiales con un panel pensado para el aula.</p>
-          </article>
-          <article class="journey-step">
-            <span class="step-number">03</span>
-            <h3>Entrega resultados</h3>
-            <p>Registra calificaciones y comentarios, genera reportes listos para compartir con quien corresponda.</p>
-          </article>
-          <article class="journey-step">
-            <span class="step-number">04</span>
-            <h3>Acompa&ntilde;a a la comunidad</h3>
-            <p>Programa avisos, reuniones y recordatorios para que nadie pierda informaci&oacute;n importante.</p>
-          </article>
+        <h2 class="section-title-centered">Un d&iacute;a acad&eacute;mico coordinado de principio a fin</h2>
+        <div class="journey-timeline">
+          <div class="timeline-line"></div>
+
+          <div class="journey-step">
+            <div class="step-marker step-1">
+              <span class="step-number">01</span>
+            </div>
+            <div class="step-card">
+              <div class="step-header">
+                <div class="step-icon">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+                  </svg>
+                </div>
+                <h3>Define tu plan</h3>
+              </div>
+              <p>Configura unidades, objetivos y evidencias. ACDEMIC replica la estructura para cada grupo en segundos.</p>
+            </div>
+          </div>
+
+          <div class="journey-step">
+            <div class="step-marker step-2">
+              <span class="step-number">02</span>
+            </div>
+            <div class="step-card">
+              <div class="step-header">
+                <div class="step-icon">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                  </svg>
+                </div>
+                <h3>Comparte la clase</h3>
+              </div>
+              <p>Lanza actividades, controla asistencia y entrega materiales con un panel pensado para el aula.</p>
+            </div>
+          </div>
+
+          <div class="journey-step">
+            <div class="step-marker step-3">
+              <span class="step-number">03</span>
+            </div>
+            <div class="step-card">
+              <div class="step-header">
+                <div class="step-icon">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                  </svg>
+                </div>
+                <h3>Entrega resultados</h3>
+              </div>
+              <p>Registra calificaciones y comentarios, genera reportes listos para compartir con quien corresponda.</p>
+            </div>
+          </div>
+
+          <div class="journey-step">
+            <div class="step-marker step-4">
+              <span class="step-number">04</span>
+            </div>
+            <div class="step-card">
+              <div class="step-header">
+                <div class="step-icon">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                  </svg>
+                </div>
+                <h3>Coordina la comunicaci&oacute;n</h3>
+              </div>
+              <p>Programa avisos, reuniones y recordatorios para que nadie pierda informaci&oacute;n importante.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -185,8 +339,13 @@ const pageDescription = "ACDEMIC coordina planeaci&oacute;n, clases y comunicaci
     <section class="section section-cta" id="cta">
       <div class="container cta-grid">
         <div class="cta-copy">
-          <span class="section-tag">Contacto</span>
-          <h2>Agenda una conversaci&oacute;n y conoce ACDEMIC en acci&oacute;n</h2>
+          <span class="section-tag">
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            Contacto
+          </span>
+          <h2>Agenda una conversaci&oacute;n y conoce <span class="dynamic-text">ACDEMIC</span> en acci&oacute;n</h2>
           <p>
             Conecta tu equipo acad&eacute;mico con una plataforma que prioriza transparencia, orden y crecimiento sostenible.
           </p>
