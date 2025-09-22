@@ -1,0 +1,209 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const pageTitle = "ACDEMIC | Plataforma acad&eacute;mica conectada";
+const pageDescription = "ACDEMIC coordina planeaci&oacute;n, clases y comunicaci&oacute;n acad&eacute;mica en un mismo lugar para equipos que buscan claridad y seguimiento continuo.";
+---
+<Layout title={pageTitle} description={pageDescription}>
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Navegaci&oacute;n principal">
+        <a class="brand" href="#inicio">
+          <span class="brand-mark" aria-hidden="true">AC</span>
+          <span class="brand-text">
+            <strong>ACDEMIC</strong>
+            <small>Aprendizaje conectado</small>
+          </span>
+        </a>
+        <div class="nav-links">
+          <a href="#inicio">Inicio</a>
+          <a href="#oferta">Oferta</a>
+          <a href="#experiencia">Experiencia</a>
+          <a href="#recorrido">Recorrido</a>
+          <a href="#cta">Contacto</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>Conectar, Potenciar, Transformar.</h1>
+          <p>
+            ACDEMIC es la plataforma educativa que integra gestión académica, un asistente pedagógico y un aula interactiva en tiempo real, conectando de manera inteligente a profesores, estudiantes y padres.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="mailto:hola@acdemic.com?subject=Solicitar%20demo%20ACDEMIC">Solicitar demostraci&oacute;n</a>
+            <a class="btn btn-outline" href="#oferta">Ver c&oacute;mo funciona</a>
+          </div>
+        </div>
+        <aside class="hero-visual" aria-hidden="true">
+          <div class="hero-card schedule">
+            <span class="card-suptitle">Aula Interactiva</span>
+            <strong>Participaci&oacute;n en tiempo real</strong>
+            <ul>
+              <li><span>Actividades y quizzes en vivo</span></li>
+              <li><span>Resultados al instante</span></li>
+              <li><span>Gamificaci&oacute;n que motiva</span></li>
+            </ul>
+          </div>
+          <div class="hero-card updates">
+            <span class="card-suptitle">Asistente Pedag&oacute;gico</span>
+            <strong>Ense&ntilde;anza inteligente</strong>
+            <div class="hero-pill-group">
+              <span class="pill">Genera contenido relevante</span>
+              <span class="pill">Adapta las lecciones</span>
+              <span class="pill">Ahorra tiempo valioso</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section-highlight" id="oferta">
+      <div class="container">
+        <header class="section-head">
+          <span class="section-tag">Oferta</span>
+          <h2>Todo el ciclo acad&eacute;mico gestionado en un solo lugar</h2>
+          <p>
+            Planifica, imparte y comunica desde ACDEMIC. La plataforma automatiza tareas repetitivas, guarda evidencias y ofrece
+            vistas diferenciadas seg&uacute;n cada rol para que la coordinaci&oacute;n sea sencilla.
+          </p>
+        </header>
+        <div class="insight-grid">
+          <article class="insight-card">
+            <h3>Gesti&oacute;n Acad&eacute;mica Simplificada</h3>
+            <p>Crea plantillas y reportes compatibles con los formatos que necesitas, ahorrando horas de trabajo manual.</p>
+            <ul>
+              <li>Maneja clases de varias instituciones</li>
+              <li>Exportaci&oacute;n flexible de datos</li>
+              <li>Calendario acad&eacute;mico integrado</li>
+            </ul>
+          </article>
+          <article class="insight-card">
+            <h3>Asistente Pedag&oacute;gico</h3>
+            <p>Sube un documento y el asistente genera evaluaciones, tareas y res&uacute;menes basados en tu material de clase.</p>
+            <ul>
+              <li>Comprensi&oacute;n de contexto para crear contenido</li>
+              <li>Sugerencias de temas para repasar</li>
+              <li>Biblioteca de recursos autom&aacute;tica</li>
+            </ul>
+          </article>
+          <article class="insight-card">
+            <h3>Comunicaci&oacute;n Profesional</h3>
+            <p>Centraliza avisos, reuniones y reportes con confirmaciones de lectura y un historial accesible.</p>
+            <ul>
+              <li>Plantillas de mensajes inteligentes</li>
+              <li>Gesti&oacute;n de eventos con un clic</li>
+              <li>Seguimiento de comunicaciones</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-experience" id="experiencia">
+      <div class="container">
+        <header class="section-head">
+          <span class="section-tag">Experiencia</span>
+          <h2>Interfaces dise&ntilde;adas para cada integrante de la comunidad educativa</h2>
+        </header>
+        <div class="persona-showcase">
+          <article class="persona-pane">
+            <span class="persona-label">Docentes</span>
+            <h3>Su Asistente Pedag&oacute;gico</h3>
+            <p>
+              ACDEMIC automatiza las tareas repetitivas para que puedas centrarte en la ense&ntilde;anza. Accede a herramientas de gesti&oacute;n, un asistente contextual y un aula interactiva, todo en un mismo lugar.
+            </p>
+            <ul>
+              <li>Genera <strong>planeamientos</strong> seg&uacute;n los est&aacute;ndares educativos.</li>
+              <li>Crea <strong>actividades evaluativas</strong> contextuales.</li>
+              <li>Centraliza la comunicaci&oacute;n con las familias.</li>
+            </ul>
+          </article>
+          <article class="persona-pane">
+            <span class="persona-label">Estudiantes</span>
+            <h3>Participaci&oacute;n y Claridad</h3>
+            <p>
+              Convi&eacute;rtete en un participante activo de tu educaci&oacute;n con acceso transparente a tu progreso y materiales de clase.
+            </p>
+            <ul>
+              <li>Calificaciones y materiales al instante</li>
+              <li>Participaci&oacute;n en actividades interactivas</li>
+              <li>Calendario personal con todas tus obligaciones</li>
+            </ul>
+          </article>
+          <article class="persona-pane">
+            <span class="persona-label">Familias</span>
+            <h3>Conexi&oacute;n y Tranquilidad</h3>
+            <p>
+              Mantente informado y conectado de forma sencilla, con una vista completa del progreso acad&eacute;mico de tus hijos.
+            </p>
+            <ul>
+              <li>Panel familiar con el progreso de todos tus hijos</li>
+              <li>Alertas relevantes sobre notas y eventos</li>
+              <li>Canal de comunicaci&oacute;n directo con los profesores</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-journey" id="recorrido">
+      <div class="container">
+        <header class="section-head center">
+          <span class="section-tag">Recorrido</span>
+          <h2>Un d&iacute;a acad&eacute;mico coordinado de principio a fin</h2>
+        </header>
+        <div class="journey-flow">
+          <article class="journey-step">
+            <span class="step-number">01</span>
+            <h3>Define tu plan</h3>
+            <p>Configura unidades, objetivos y evidencias. ACDEMIC replica la estructura para cada grupo en segundos.</p>
+          </article>
+          <article class="journey-step">
+            <span class="step-number">02</span>
+            <h3>Comparte la clase</h3>
+            <p>Lanza actividades, controla asistencia y entrega materiales con un panel pensado para el aula.</p>
+          </article>
+          <article class="journey-step">
+            <span class="step-number">03</span>
+            <h3>Entrega resultados</h3>
+            <p>Registra calificaciones y comentarios, genera reportes listos para compartir con quien corresponda.</p>
+          </article>
+          <article class="journey-step">
+            <span class="step-number">04</span>
+            <h3>Acompa&ntilde;a a la comunidad</h3>
+            <p>Programa avisos, reuniones y recordatorios para que nadie pierda informaci&oacute;n importante.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-cta" id="cta">
+      <div class="container cta-grid">
+        <div class="cta-copy">
+          <span class="section-tag">Contacto</span>
+          <h2>Agenda una conversaci&oacute;n y conoce ACDEMIC en acci&oacute;n</h2>
+          <p>
+            Conecta tu equipo acad&eacute;mico con una plataforma que prioriza transparencia, orden y crecimiento sostenible.
+          </p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="mailto:hola@acdemic.com?subject=Solicitar%20demo%20ACDEMIC">Reservar demo</a>
+          <a class="btn btn-outline" href="mailto:hola@acdemic.com?subject=Recibir%20informaci%C3%B3n%20ACDEMIC">Recibir informaci&oacute;n</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer">
+      <span>&copy; {new Date().getFullYear()} ACDEMIC. Plataforma acad&eacute;mica que evoluciona con tus proyectos educativos.</span>
+      <a href="mailto:hola@acdemic.com">hola@acdemic.com</a>
+    </div>
+  </footer>
+</Layout>
+
