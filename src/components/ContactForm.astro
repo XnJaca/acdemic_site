@@ -1,0 +1,180 @@
+---
+---
+<div class="contact-form-wrapper" id="contacto">
+  <form class="contact-form" id="contactForm">
+    <div class="form-group">
+      <label for="name">Nombre completo</label>
+      <input type="text" id="name" name="name" required />
+    </div>
+
+    <div class="form-group">
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="email" required />
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Teléfono (opcional)</label>
+      <input type="tel" id="phone" name="phone" />
+    </div>
+
+    <div class="form-group">
+      <label for="institution">Institución (si aplica)</label>
+      <input type="text" id="institution" name="institution" />
+    </div>
+
+    <div class="form-group">
+      <label for="message">Mensaje</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary" id="submitBtn">
+      <span class="btn-text">Enviar solicitud</span>
+      <span class="btn-loading" style="display: none;">Enviando...</span>
+    </button>
+
+    <div class="form-message" id="formMessage" style="display: none;"></div>
+  </form>
+</div>
+
+<style>
+  .contact-form-wrapper {
+    max-width: 600px;
+    margin: 2rem auto 0;
+  }
+
+  .contact-form {
+    background: var(--surface);
+    border: 1px solid rgba(15, 28, 43, 0.1);
+    border-radius: var(--radius-md);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-card);
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--ink);
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 1px solid rgba(15, 28, 43, 0.15);
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all var(--transition);
+    background: #ffffff;
+    color: var(--ink);
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(63, 154, 229, 0.1);
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .contact-form .btn {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .form-message {
+    margin-top: 1rem;
+    padding: 1rem 1.25rem;
+    border-radius: var(--radius-sm);
+    text-align: center;
+    font-weight: 500;
+  }
+
+  .form-message.success {
+    background: rgba(34, 197, 94, 0.1);
+    color: #15803d;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+  }
+
+  .form-message.error {
+    background: rgba(239, 68, 68, 0.1);
+    color: #b91c1c;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+  }
+
+  .btn-loading {
+    opacity: 0.7;
+  }
+</style>
+
+<script>
+  const form = document.getElementById('contactForm') as HTMLFormElement;
+  const submitBtn = document.getElementById('submitBtn') as HTMLButtonElement;
+  const btnText = submitBtn.querySelector('.btn-text') as HTMLElement;
+  const btnLoading = submitBtn.querySelector('.btn-loading') as HTMLElement;
+  const formMessage = document.getElementById('formMessage') as HTMLElement;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Mostrar estado de carga
+    submitBtn.disabled = true;
+    btnText.style.display = 'none';
+    btnLoading.style.display = 'inline';
+    formMessage.style.display = 'none';
+
+    // Obtener datos del formulario
+    const formData = new FormData(form);
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      phone: formData.get('phone'),
+      institution: formData.get('institution'),
+      message: formData.get('message'),
+      subject: 'Nueva solicitud de demo - ACDEMIC'
+    };
+
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        // Éxito
+        formMessage.textContent = '¡Mensaje enviado! Te contactaremos pronto.';
+        formMessage.className = 'form-message success';
+        formMessage.style.display = 'block';
+        form.reset();
+      } else {
+        // Error del servidor
+        throw new Error(result.error || 'Error al enviar el mensaje');
+      }
+    } catch (error) {
+      // Error de red o del servidor
+      formMessage.textContent = 'Hubo un error al enviar el mensaje. Por favor intenta de nuevo.';
+      formMessage.className = 'form-message error';
+      formMessage.style.display = 'block';
+    } finally {
+      // Restaurar botón
+      submitBtn.disabled = false;
+      btnText.style.display = 'inline';
+      btnLoading.style.display = 'none';
+    }
+  });
+</script>

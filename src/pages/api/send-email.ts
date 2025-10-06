@@ -6,7 +6,7 @@ const resend = new Resend(import.meta.env.RESEND_API_KEY);
 export const POST: APIRoute = async ({ request }) => {
   try {
     const body = await request.json();
-    const { name, email, subject, message } = body;
+    const { name, email, phone, institution, subject, message } = body;
 
     // Validación básica
     if (!name || !email || !message) {
@@ -25,6 +25,8 @@ export const POST: APIRoute = async ({ request }) => {
         <h2>Nuevo mensaje desde ACDEMIC</h2>
         <p><strong>Nombre:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
+        ${phone ? `<p><strong>Teléfono:</strong> ${phone}</p>` : ''}
+        ${institution ? `<p><strong>Institución:</strong> ${institution}</p>` : ''}
         <p><strong>Mensaje:</strong></p>
         <p>${message}</p>
       `,
