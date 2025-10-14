@@ -16,16 +16,33 @@ const pageDescription = "ACDEMIC coordina planeaci&oacute;n, clases y comunicaci
             <small>Aprendizaje conectado</small>
           </span>
         </a>
-        <div class="nav-links">
-          <a href="#inicio">Inicio</a>
-          <a href="#oferta">Oferta</a>
-          <a href="#experiencia">Experiencia</a>
-          <a href="#recorrido">Recorrido</a>
-          <a href="#cta">Contacto</a>
+        <button class="nav-toggle" aria-label="Abrir menú">
+          <span class="hamburger"></span>
+        </button>
+        <div class="nav-links-wrapper">
+          <div class="nav-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#oferta">Oferta</a>
+            <a href="#experiencia">Experiencia</a>
+            <a href="#recorrido">Recorrido</a>
+            <a href="#cta">Contacto</a>
+          </div>
         </div>
       </nav>
     </div>
   </header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinksWrapper = document.querySelector('.nav-links-wrapper');
+
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('open');
+      navLinksWrapper.classList.toggle('open');
+    });
+  });
+</script>
 
   <main>
     <section class="hero" id="inicio">
